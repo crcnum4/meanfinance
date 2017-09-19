@@ -1,5 +1,6 @@
 var mongoose = require('mongoose');
-var dburl = 'mongodb://' + process.env.IP + ':27017/CDFinance';
+// var dburl = 'mongodb://' + process.env.IP + ':27017/CDFinance';
+var dburl = 'mongodb://localhost:27017/CDFinance';
 
 mongoose.connect(dburl);
 
@@ -29,7 +30,7 @@ process.on('SIGTERM', function () {
   });
 });
 
-process.once('SIGUSR2', function() {
+process.on('SIGUSR2', function() {
   mongoose.connection.close(function() {
     console.log('Mongoose disconnected through app termination (SIGUSR2)');
     process.kill(process.pid, 'SIGUSR2');
