@@ -1,5 +1,6 @@
 var mongoose = require('mongoose');
-var dburl = 'mongodb://' + process.env.IP + ':27017/CDFinance';
+var dburl = 'mongodb://localhost:27017/';
+//var dburl = 'mongodb://' + process.env.IP + ':27017/CDFinance';
 
 mongoose.connect(dburl);
 
