@@ -29,10 +29,7 @@ process.on('SIGTERM', function () {
   });
 });
 
-<<<<<<< HEAD
-=======
 process.once('SIGUSR2', function() {
->>>>>>> b937f04f3568b40954321fbfc3cac87cb0c8f6ce
   mongoose.connection.close(function() {
     console.log('Mongoose disconnected through app termination (SIGUSR2)');
     process.kill(process.pid, 'SIGUSR2');
