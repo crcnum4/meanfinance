@@ -8,15 +8,138 @@
 <body>
 
   <mh-navigation></mh-navigation>
-  <div class="container">
+  <div class="flex-container">
+    <div class="box flex1">
     <p class= "text-muted text-center">
       <img class='text-center' src="/images/Logo.png" height="150" alt="CareerDevs Finance"/>
     </p>
-    <div ng-view></div>
+  </div>
+ <div ng-view class="box flex2"></div>
+
+
+<div class="box flex3">
+  <div class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">CDFinance</a>
+        </div>
+        <center>
+            <div class="navbar-collapse collapse" id="navbar-main">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="#">Findstock</a>
+                    </li>
+                    <li><a href="#">Register</a>
+                    </li>
+                </ul>
+           <!-- Right side of the navbar -->
+           <!-- Login Form -->
+           <form class="navbar-form navbar-right" name="loginForm">
+             <div class="form-group">
+               <input type="text" class="form-control" name="username" placeholder="Username">
+             </div>
+             <div class="form-group">
+               <input type="password" class="form-control" name="password" placeholder="Password">
+             </div>
+             <button type="submit" class="btn btn-primary">Login</button>
+           </form>
+            </div>
+        </center>
+    </div>
+</div>
+		<!--Tabs and Panels-->
+    <section class="page1">
+    <div class="container">
+
+            <div class="col-md-12">
+
+              <div class="panel panel-default panel-fade">
+
+                <div class="panel-heading">
+
+                  <span class="panel-title">
+
+                    <div class="pull-left">
+
+                    <ul class="nav nav-tabs">
+                      <li class="active"><a href="#portfolio" data-toggle="tab">Portfolio</a></li>
+                      <li><a href="#watchlist" data-toggle="tab">Watchlist</a></li>
+                    </ul>
+
+                    </div>
+
+                  </span>
+
+                </div>
+
+                <div class="panel-body">
+                  <div class="tab-content">
+                  <h3>Portfolio</h3>
+                     <FORM ACTION="" METHOD="post">
+                      <div style="overflow-x:auto;">
+                      <TABLE class="table table-striped">
+                      <THEAD>
+                        <TR><TH>Company Name</TH><TH style="text-align:left">Share Value</TH><TH style="text-align:left">Share No.</TH><TH>Total value</TH></TR>
+                      </THEAD>
+                      <TBODY>
+                        <TR><TD><INPUT TYPE="text" NAME="cname" placeholder="FB"></TD><TD><INPUT TYPE="text" NAME="sharevalue" placeholder="150"></TD><TD><INPUT TYPE="text" NAME="sharenumber" placeholder="5"></TD><TD><INPUT TYPE="text"NAME="total"></TD></TR>
+                      </TBODY>
+                      </TABLE>
+                      </div>
+                      Select and click below<BR><BR>
+                      <INPUT TYPE="submit" CLASS="btn btn-outline btn-default" VALUE="Submit">
+                    </FORM>
+                    </div>
+
+                    <div id="watchlist">
+                    <h3>Watchlist</h3>
+                     <FORM ACTION="" METHOD="post">
+                      <div style="overflow-x:auto">
+                      <TABLE class="table table-striped">
+                      <THEAD>
+                        <TR><TR><TH>Company Name</TH><TH style="text-align:left">Share Value</TH></TR>
+                      </THEAD>
+                      <TBODY>
+                        <TR><TD><INPUT TYPE="text" NAME="cname" placeholder="FB"></TD><TD><INPUT TYPE="text" NAME="sharevalue" placeholder="150"></TD></TR>
+                      </TBODY>
+                      </TABLE>
+                    </div>
+                    </div>
+                      Select and click below<BR><BR>
+                      <INPUT TYPE="submit" CLASS="btn btn-outline btn-default" VALUE="Submit">
+                    </FORM>
+                    </div>
+
+                  </div>
+
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+    </section>
+
+  <div class="container">
+  	<div class="history">
+  		<h1><strong>View History</strong></h1>
+  			<div class = "container">
+          <form>
+            <label>Company Name</label><br>
+            <button>Send to Watchlist</button>
+          </form>
+        </div>
+    </div>
   </div>
 
-  <footer class="footer">
-    <div class="container">
+    <div class="box flex3">
+    <footer class="footer">
+    <!--<div class="container">-->
       <p class="text-muted text-center">
         <img src="/images/Logo.png" height="35" alt="CareerDevs Finance"/>
       </p>
@@ -26,7 +149,7 @@
       </p>
     </div>
   </footer>
-
+  </div>
   <script src="jquery/jquery-2.1.4.min.js"></script>
   <script src="node_modules/angular/angular.js"></script>
   <script src="node_modules/angular-route/angular-route.js"></script>
