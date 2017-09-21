@@ -95,3 +95,15 @@
   align-flex2: flex-end;
 
 }
+#p1{
+	background-color: #EBEBEB;
+	padding-top: 40px;
+	margin-top:2%;
+	height:250px;
+	font-size: 16;
+	color: black;
+}
+.nav{
+font-size: 12;
+color: black;
+}

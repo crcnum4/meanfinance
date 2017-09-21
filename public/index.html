@@ -16,75 +16,28 @@
   </div>
  <div ng-view class="box flex2"></div>
 
-	<!--Tabs and Panels-->
-    <section class="page1">
-     <div class="container">
-
-            <div class="col-md-12">
-              <div class="panel panel-default panel-fade">
-
-                <div class="panel-heading">
-
-                  <span class="panel-title">
-
-                    <div class="pull-left">
-
-                    <ul class="nav nav-tabs">
-                      <li class="active"><a href="#portfolio" data-toggle="tab">Portfolio</a></li>
-                      <li><a href="#watchlist" data-toggle="tab">Watchlist</a></li>
-                    </ul>
-
-                    </div>
-
-                  </span>
-
-                </div>
-
-                <div class="panel-body">
-                  <div class="tab-content">
-                  <h3>Portfolio</h3>
-                     <FORM ACTION="" METHOD="post">
-                      <div style="overflow-x:auto;">
-                      <TABLE class="table table-striped">
-                      <THEAD>
-                        <TR><TH>Company Name</TH><TH style="text-align:left">Share Value</TH><TH style="text-align:left">Share No.</TH><TH>Total value</TH></TR>
-                      </THEAD>
-                      <TBODY>
-                        <TR><TD><INPUT TYPE="text" NAME="cname" placeholder="Symbol"></TD><TD><INPUT TYPE="text" NAME="sharevalue"></TD><TD><INPUT TYPE="text" NAME="sharenumber"></TD><TD><INPUT TYPE="text"NAME="total"></TD></TR>
-                      </TBODY>
-                      </TABLE>
-                      </div>
-                      
-                    </FORM>
-                    </div>
-
-                    <div id="watchlist">
-                    <h3>Watchlist</h3>
-                     <FORM ACTION="" METHOD="post">
-                      <div style="overflow-x:auto">
-                      <TABLE class="table table-striped">
-                      <THEAD>
-                        <TR><TR><TH>Company Name</TH><TH style="text-align:left">Share Value</TH></TR>
-                      </THEAD>
-                      <TBODY>
-                        <TR><TD><INPUT TYPE="text" NAME="cname" placeholder="FB"></TD><TD><INPUT TYPE="text" NAME="sharevalue" placeholder="150"></TD></TR>
-                      </TBODY>
-                      </TABLE>
-                    </div>
-                    </div>
-                    </FORM>
-                    </div>
-
-                  </div>
-
-                </div>
-
-              </div>
-
-            </div>
-
-          </div>
-    </section>
+<div class="container" id = "p1">
+   	<ul class="nav nav-tabs nav-justified" role="tablist">
+   		<li class="active"><a data-toggle="tab" href="#portfolio">Portfolio</a></li>
+   		<li><a data-toggle="tab" href="#watchlist">Watchlist</a></li>
+   	</ul>
+   	<div class = "tab-content">
+   		<div id="portfolio" class="tab-pane fade in active">
+   			<ul class="nav nav-pills nav-justified" role="tablist" >
+   				<li>Company name/Symbol</li>
+   				<li>Value of Share</li>
+   				<li>No.of Share</li>
+   				<li>Total</li>
+   			</ul>
+   		</div>
+   		<div id="watchlist" class="tab-pane fade">
+             <ul class="nav nav-pills nav-justified"  role="tablist">
+   			<li>Company name/Symbol</li>
+   			<li>Value of Share</li>
+   		  </ul>
+   		</div>
+   	</div>
+ </div>
 
   <div class="container">
   	<div class="history">
