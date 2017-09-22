@@ -1,6 +1,13 @@
 var mongoose = require('mongoose');
+<<<<<<< HEAD
+
+// var dburl = 'mongodb://' + process.env.IP + ':27017/CDFinance';
+var dburl = 'mongodb://localhost:27017/CDFinance';
+
+=======
 //var dburl = 'mongodb://' + process.env.IP + ':27017/CDFinance';
 var dburl = 'mongodb://localhost:27017/CDFinanace';
+>>>>>>> Changed dburl to localhost and changed port to 3000
 mongoose.connect(dburl);
 
 mongoose.connection.on('connected', function() {
@@ -29,7 +36,7 @@ process.on('SIGTERM', function () {
   });
 });
 
-process.once('SIGUSR2', function() {
+process.on('SIGUSR2', function() {
   mongoose.connection.close(function() {
     console.log('Mongoose disconnected through app termination (SIGUSR2)');
     process.kill(process.pid, 'SIGUSR2');
